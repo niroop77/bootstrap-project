@@ -169,6 +169,15 @@ input.form-control {
   margin: auto;
   color:#0056b3;
 }
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+.btn-pm{
+  background-color:#0056b3 !important;
+}
 /* -------------------------------
    MOBILE RESPONSIVE (Bootstrap5)
 --------------------------------- */
