@@ -244,4 +244,10 @@ input.form-control {
   margin-bottom: -70px !important;
   margin-left: -20px !important;
 }
+.over-x{
+  overflow: hidden;
+}
+body {
+    overflow-x: hidden !important;
+}
     }
