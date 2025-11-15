@@ -203,11 +203,14 @@ img {
 }
 
 /* Icons */
-.icons-1,
-.icons {
+.icons-1{
   font-size: 30px;
-  background: var(--gradient);
-  color: transparent;
+  color: #20C1AC;
+}
+.icons {
+  font-size: 22px;
+  color: #ffffff;
+  margin:0px 5px;
 }
 
 /* =========================================================
@@ -285,7 +288,7 @@ footer a:hover {
 
 /* Logo default: white */
 .navbar-brand img {
-    height: 42px;
+    height: 65px;
     transition: 0.3s ease;
 }
 
