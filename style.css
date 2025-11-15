@@ -354,3 +354,153 @@ footer a:hover {
 .navbar.scrolled .nav-link:hover {
     color: #111 !important;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES FOR NKR WEBSITE
+============================================ */
+
+/* ----------  Max-width: 768px (Tablets + Large Phones) ---------- */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 10px 0;
+    }
+    .navbar-brand img {
+        height: 36px;
+    }
+    .nav-link {
+        font-size: 15px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 70vh;
+        padding: 60px 20px;
+        text-align: center;
+        background-position: center;
+    }
+    .hero-section h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .hero-section p {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .hero-section .btn {
+        margin-top: 15px;
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+
+    /* Section Headings */
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    /* Cards / Feature Boxes */
+    .card,
+    .feature-box {
+        margin-bottom: 20px;
+    }
+
+    /* Stats */
+    .stats-box {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ----------  Max-width: 576px (Mobile Phones) ---------- */
+@media (max-width: 576px) {
+
+    /* Navbar */
+    .navbar-brand img {
+        height: 32px;
+    }
+    .projects{
+      margin-left: 0px !important;
+    }
+    .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        min-height: 85vh;
+    }
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    .hero-section p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    /* Buttons */
+    .hero-section .btn {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Images inside sections */
+    .about-img,
+    .services-img,
+    .mission-img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+    }
+}
+
+
+/* ----------  Max-width: 425px (Small Phones) ---------- */
+@media (max-width: 425px) {
+
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    /* Fix spacing */
+    .section-padding {
+        padding: 40px 15px;
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+    }
+}
+
+
+/* ----------  Max-width: 360px (Extra Small Phones) ---------- */
+@media (max-width: 360px) {
+
+    .hero-section {
+        padding: 40px 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 22px;
+    }
+
+    .hero-section p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .navbar-brand img {
+        height: 28px;
+    }
+}
