@@ -1,334 +1,264 @@
-/* ============================================
-   BRAND COLORS + TYPOGRAPHY (UPDATED FOR LOGO)
-=============================================== */
+/* =========================================================
+   NKR BRAND DESIGN SYSTEM – FULL OPTIMIZED VERSION
+   Primary Colors from Logo: Teal, Coral Red, Orange Gradient
+============================================================ */
 
 :root {
-  /* Primary brand colors (from NKR logo) */
-  --brand-teal: #20C1AC;
-  --brand-red: #FF5E57;
-  --brand-orange: #FFA63A;
+  /* Brand Colors */
+  --teal: #20C1AC;
+  --red: #FF5E57;
+  --orange: #FFA63A;
+  --gradient: linear-gradient(90deg, #20C1AC, #FF5E57, #FFA63A);
+  
+  /* Neutrals */
+  --dark: #101010;
+  --light: #ffffff;
+  --gray: #6c757d;
 
-  /* Gradient presets */
-  --brand-gradient: linear-gradient(90deg, #20C1AC, #FF5E57, #FFA63A);
-  --brand-gradient-reverse: linear-gradient(90deg, #FFA63A, #FF5E57, #20C1AC);
+  /* UI */
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
 
-  /* Neutral colors */
-  --neutral-light: #f5f5f5;
-  --neutral-dark: #222222;
-  --white: #ffffff;
+  /* Shadow */
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.18);
 
-  /* Typography scale */
-  --font-h1: 3rem;
-  --font-h2: 2.25rem;
-  --font-h3: 1.75rem;
-  --font-card-title: 1.25rem;
-  --font-body: 1rem;
-  --font-small: 0.875rem;
-  --font-btn: 1rem;
+  /* Font Weight System */
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Transitions */
+  --transition-fast: 0.25s ease;
+  --transition-mid: 0.35s ease;
+  --transition-slow: 0.45s ease;
 }
-/* ============================================
-   EXISTING CSS (UPDATED TO USE VARIABLES)
-=============================================== */
 
+/* =========================================================
+   GLOBAL STYLING
+============================================================ */
 body {
-    overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  color: var(--dark);
+  background: var(--light);
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/* Hero Section Styles */
-.hero-section {
-  background: 
-    linear-gradient(rgba(0, 35, 102, 0.6), rgba(0, 35, 102, 0.6)),
-    url("images/hero-2.jpg") center center / cover no-repeat;
-  height: 80vh;
-  color: #fff;
+h1, h2, h3, h4, h5 {
+  font-weight: var(--fw-bold);
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+.text-muted {
+  color: var(--gray);
+}
+
+img {
+  border-radius: var(--radius-md);
+}
+
+/* =========================================================
+   NAVIGATION BAR
+============================================================ */
+#mainNavbar {
+  padding: 15px 0;
+  transition: var(--transition-mid);
+}
+
+#mainNavbar.scrolled {
+  background: var(--gradient);
+  box-shadow: var(--shadow-soft);
+}
+
+.navbar-logo {
+  height: 42px;
 }
 
 .nav-link {
-  color: var(--neutral-light) !important;
-  font-weight: 500;
-  margin-left: 15px;
+  color: var(--light) !important;
+  font-weight: var(--fw-medium);
+  margin: 0 6px;
+  transition: var(--transition-fast);
 }
 
-.nav-link.active,
 .nav-link:hover {
-  color: var(--brand-teal) !important;
+  color: var(--orange) !important;
 }
 
-.btn-primary {
-  border: none;
-  transition: all 0.3s ease;
-    background: var(--brand-teal);
-
+.nav-link.active {
+  color: var(--orange) !important;
 }
 
-.btn-primary:hover {
-    background: var(--brand-red);
-  transform: translateY(-2px);
+/* =========================================================
+   HERO SECTION
+============================================================ */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(rgb(255 131 72 / 67%), rgb(57 182 162 / 63%)), url(images/hero-2.jpg) center center / cover no-repeat;
+  padding: 130px 0;
 }
 
-.btn-primary {
-  transition: all 0.3s ease;
+.hero-section h6 {
+  letter-spacing: 3px;
+  font-weight: var(--fw-medium);
+  color: var(--orange);
 }
 
-input.form-control {
-  border-radius: 30px 0 0 30px;
+.hero-section .btn-light {
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-bold);
+  padding: 10px 28px;
+  transition: var(--transition-mid);
 }
 
-.input-group .btn {
-  border-radius: 0 30px 30px 0;
+.hero-section .btn-light:hover {
+  background: var(--orange);
+  color: var(--light);
+  transform: translateY(-3px);
 }
 
-.service-icon {
-  width: 60px;
-  height: 60px;
-}
-
-.btn-light {
-  border-radius: 30px;
-}
-
-.card {
-  transition: all 0.3s ease;
-}
-
-.card-1 {
-  padding-top: 70px !important;
-}
-
-.text-primary-1 {
-  color: var(--brand-red) !important;
-}
+/* =========================================================
+   BRAND COLOR TEXT HELPERS
+============================================================ */
+.text-primary-1,
 .text-primary-2 {
-  color: var(--brand-teal) !important;
+  color: var(--teal) !important;
 }
 
-
+/* =========================================================
+   BUTTON SYSTEM
+============================================================ */
 .btn-primary-1 {
-  background-color: var(--brand-red);
-  color: #fff;
+  background: var(--teal);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-medium);
+  transition: var(--transition-fast);
 }
 .btn-primary-1:hover {
-  background-color: var(--brand-teal);
-  color: #fff;
+  background: var(--red);
 }
 
 .btn-primary-2 {
-  background-color: var(--brand-teal);
-  color: #fff;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-medium);
+  transition: var(--transition-mid);
 }
 .btn-primary-2:hover {
-  background-color: var(--brand-red);
-  color: #fff;
+  opacity: 0.85;
 }
+
+/* =========================================================
+   STATS / FEATURE BOXES
+============================================================ */
 .bg-primary-3 {
-  background-color: var(--brand-red);
+  background: var(--gradient);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
 }
-
-.text-bg-primary-1 {
-  background-color: var(--brand-teal);
-}
-
-.testimonial-box {
-  max-width: 650px;
-}
-
-.testimonial-box img {
-  object-fit: cover;
-  border: 4px solid var(--brand-teal);
-}
-
-p.fst-italic {
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: var(--brand-teal);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.carousel-indicators {
-  bottom: -40px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: var(--brand-teal);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-size: 50%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-
-.feature-box img {
-  transition: transform 0.3s ease;
-}
-
-.feature-box:hover img {
-  transform: scale(1.1);
-}
-
-.feature-box {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.bg-light {
-  background-color: var(--neutral-light) !important;
-}
-
-.heading-main {
-  width: 600px !important;
-  margin: auto;
-}
-
-.icons {
-  margin: 5px;
-}
-
-.projects {
+.projects{
   position: absolute;
   bottom: 0;
-  right: 0;
-  margin-bottom: -50px;
-  margin-right: -110px;
+  left: 0;
+  margin-bottom: -50px !important;
+  margin-left: 250px !important;
+}
+/* =========================================================
+   PROGRESS BAR 
+============================================================ */
+.progress-bar {
+  background: var(--gradient) !important;
+  border-radius: var(--radius-sm);
 }
 
-.icons-1 {
-  font-size: 60px;
-  margin: auto;
-  color: var(--brand-teal);
+/* =========================================================
+   CARDS & FEATURE BOXES
+============================================================ */
+.card {
+  border-radius: var(--radius-md);
+  border: none;
 }
 
+.card-1 {
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-mid);
+}
+
+.card-1:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Icons */
+.icons-1,
+.icons {
+  font-size: 30px;
+  background: var(--gradient);
+  color: transparent;
+}
+
+/* =========================================================
+   TESTIMONIAL BOX
+============================================================ */
+.testimonial-box {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 2px solid transparent;
+  border-image: var(--gradient) 1;
+  transition: var(--transition-mid);
+}
+
+.testimonial-box:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+/* =========================================================
+   BACK TO TOP BUTTON
+============================================================ */
 #btn-back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   display: none;
+  background: var(--gradient);
+  border: none;
+  border-radius: 50%;
+  padding: 14px 18px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-mid);
 }
 
-.btn-pm {
-  background-color: var(--brand-teal) !important;
+#btn-back-to-top:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
 }
 
-/* -------------------------------
-   MOBILE RESPONSIVE (Bootstrap5)
---------------------------------- */
-
-.feature-box {
-  padding: 1.5rem 1rem;
-  margin-bottom: 1.5rem;
+/* =========================================================
+   FOOTER
+============================================================ */
+footer {
+  background: #000;
+  padding-top: 60px;
 }
 
-.feature-box img {
-  width: 70px;
-  margin-bottom: 1rem;
+footer h6 {
+  font-weight: var(--fw-bold);
+  color: var(--orange);
 }
 
-.feature-box h5 {
-  font-size: 1.05rem;
+footer a {
+  transition: var(--transition-fast);
 }
 
-.feature-box p {
-  font-size: 0.9rem;
-}
-
-.container {
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-}
-
-@media (max-width: 575.98px) {
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.88rem;
-  }
-
-  .feature-box {
-    border-radius: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .testimonial-box {
-    padding: 2rem 1.5rem;
-  }
-  .w-50 {
-    width: 100% !important;
-  }
-  
-  .heading-main {
-    width: 100% !important;
-  }
-  .carousel-control-prev-icon, 
-  .carousel-control-next-icon {
-    display: none !important;
-  }
-  .text-primary-2 {
-    font-size: 16px !important;
-  }
-  .text-primary-1 {
-    font-size: 16px !important;
-  }
-  .second-heading {
-    font-size: 20px !important;
-  }
-  .hero-section {
-    height: 40vh !important;
-      background: var(--brand-gradient) !important;
-  }
-  .projects {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-bottom: -70px !important;
-    margin-left: -20px !important;
-  }
-  .over-x {
-    overflow: hidden;
-  }
-  body {
-    overflow-x: hidden !important;
-  }
-}
-/* Transparent at the top */
-#mainNavbar {
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Black background on scroll */
-#mainNavbar.scrolled {
-  background-color: #000000;     /* PURE BLACK */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* Logo responsive fix */
-.navbar-logo {
-  max-height: 80px;  /* Adjust if needed */
-  width: auto;
-  transition: max-height 0.3s;
-}
-
-#mainNavbar.scrolled .navbar-logo {
-  max-height: 65px;
+footer a:hover {
+  color: var(--teal) !important;
 }
