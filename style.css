@@ -216,17 +216,53 @@ img {
 /* =========================================================
    TESTIMONIAL BOX
 ============================================================ */
+/* Colors from brand */
+.text-teal { color: var(--teal) !important; }
+.text-red { color: var(--red) !important; }
+.text-orange { color: var(--orange) !important; }
+
+/* Gradient background for controls */
+.bg-gradient {
+  background: var(--gradient) !important;
+}
+
+/* Carousel dots */
+.carousel-indicators{
+  margin-bottom: 0px !important;
+}
+.carousel-indicators [data-bs-target] {
+  background: var(--teal);
+}
+.carousel-indicators .active {
+  background: var(--red);
+}
+
+/* Testimonial Box */
 .testimonial-box {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
-  border: 2px solid transparent;
-  border-image: var(--gradient) 1;
-  transition: var(--transition-mid);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.testimonial-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
-.testimonial-box:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-hover);
+/* Rounded images with brand border */
+.testimonial-box img {
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .testimonial-box {
+    padding: 2rem 1rem;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /* =========================================================
@@ -513,4 +549,63 @@ footer a:hover {
     .navbar-brand img {
         height: 50px;
     }
+}
+/* Modern 3D Gradient Icons */
+.nkr-icon {
+  font-size: 42px !important;
+  display: inline-block;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--gradient);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(255, 94, 87, 0.3);
+  transition: 0.35s ease;
+}
+
+.nkr-icon:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(32, 193, 172, 0.35);
+}
+/* Service Feature Cards */
+.improved-card {
+  transition: 0.35s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: var(--radius-lg);
+}
+
+.improved-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: #20C1AC;
+}
+[data-aos] {
+  transition-duration: 850ms !important;
+  transition-timing-function: ease-out !important;
+}
+.hero-section {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65), 
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("images/hero-2.jpg") center/cover no-repeat;
+}
+#mainNavbar {
+  transition: all 0.35s ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+#mainNavbar.scrolled {
+  background: rgba(255, 255, 255, 0.96) !important;
+  box-shadow: var(--shadow-soft);
+}
+.nav-link::after {
+  height: 2px;
+  background: var(--gradient);
+  opacity: 0.8;
+}
+.btn-primary-1:hover,
+.btn-primary-2:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
 }
