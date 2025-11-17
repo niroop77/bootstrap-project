@@ -390,6 +390,12 @@ footer a:hover {
 .navbar.scrolled .nav-link:hover {
     color: #111 !important;
 }
+.section-light {
+  background: linear-gradient(120deg, var(--light), rgba(32, 193, 172, 0.1));
+  /* subtle overlay with brand teal */
+  color: var(--dark);
+  padding: 0px 0;
+}
 /* ============================================
    MOBILE RESPONSIVE FIXES FOR NKR WEBSITE
 ============================================ */
